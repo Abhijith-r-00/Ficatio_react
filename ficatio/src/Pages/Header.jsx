@@ -2,7 +2,8 @@ import React from 'react'
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({setShow,logined}) => {
+  const handleShow = () => setShow(true);
   return (
    <>
       <Navbar expand="lg" style={{ backgroundColor: "#003366" }} variant="dark" className="py-3 shadow-sm">
@@ -23,7 +24,7 @@ const Header = () => {
             <Nav.Link href="#parts" className="fs-5 text-light mx-3">Parts</Nav.Link>
             <Nav.Link href="#about" className="fs-5 text-light mx-3">About</Nav.Link>
             <Nav.Link href="#contact" className="fs-5 text-light mx-3">Contact</Nav.Link>
-            <Button variant="warning" className="ms-3 px-4">Login</Button>
+            <Button variant="warning" className="ms-3 px-4" onClick={handleShow} >{logined?"Logout":"Login "}</Button>
             <FaUser size={24} className="ms-3 text-light" />
           </Nav>
         </Navbar.Collapse>

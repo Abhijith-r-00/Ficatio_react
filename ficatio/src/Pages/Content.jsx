@@ -3,7 +3,8 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { FaTruck, FaTools, FaStar, FaUsers } from "react-icons/fa";
 
 
-const Content = () => {
+const Content = ({setShow,logined}) => {
+  const handleShow = () => setShow(true);
   return (
     <>
      
@@ -16,7 +17,7 @@ const Content = () => {
         <Container>
           <h1 className="display-3 fw-bold">Find the Best Vehicle Parts Here!</h1>
           <p className="lead">High-quality auto parts at unbeatable prices. Fast delivery, best service!</p>
-          <Button variant="warning" size="lg">Shop Now</Button>
+          <Button variant="warning" size="lg" onClick={handleShow}>Shop Now</Button>
         </Container>
       </div>
 
