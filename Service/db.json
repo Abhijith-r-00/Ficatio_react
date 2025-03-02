@@ -1,0 +1,123 @@
+{
+    "registered": [
+      {
+        "id": "621a",
+        "username": "abhishek",
+        "email": "abhishek@gmail.com",
+        "password": "abhishek"
+      }
+    ],
+    "Login": [],
+    "vehicle": [
+      {
+        "type": "Cars",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4ehOliXYLmFZUiSoly5NF1JZF-Zf5fL2Q&s",
+        "brands": ["Toyota", "Honda", "Ford", "BMW", "Mercedes-Benz", "Audi", "Tesla", "Nissan", "Hyundai"]
+      },
+      {
+        "type": "Bikes",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ortrcpx1mI5d6b16NlEDulmqPQw-gc1FQQ&s",
+        "brands": ["Yamaha", "Ducati", "Harley-Davidson", "Kawasaki", "Suzuki", "KTM", "Triumph", "Honda"]
+      },
+      {
+        "type": "Trucks",
+        "image": "https://5.imimg.com/data5/QT/QF/MY-3530642/tata-truck-metal-body-parts-500x500.jpg",
+        "brands": ["Volvo", "Mack", "Mercedes-Benz", "Ford", "Isuzu", "Scania", "Freightliner", "MAN"]
+      },
+      {
+        "type": "Buses",
+        "image": "https://s.alicdn.com/@sc04/kf/H354c815bda8048a2adcba9a371d80e2ez.jpg",
+        "brands": ["Tata", "Mercedes-Benz", "Volvo", "Ashok Leyland", "Scania", "MAN", "Eicher", "Isuzu"]
+      },
+      {
+        "type": "SUVs",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9KtP0emOG3dQ1GqILw4_AukW007ExaCxPB26Axc--ah-6a1IwKTyLO8FH9gp69Dn2U4&usqp=CAU",
+        "brands": ["Jeep", "Toyota", "Ford", "Land Rover", "Nissan", "Hyundai", "Kia", "Chevrolet"]
+      },
+      {
+        "type": "Electric Vehicles",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSIVRHW5HkBT2YTF4KR735F-AqLx0e6hZojg&s",
+        "brands": ["Tesla", "Lucid", "Rivian", "Nio", "BYD", "Porsche Taycan", "BMW iX", "Mercedes EQS"]
+      },
+      {
+        "type": "Vans",
+        "image": "https://image.made-in-china.com/202f0j00EePWSYdFAhGv/Genuine-Auto-Spare-Parts-for-Saic-Maxus-Ldv-Van-Pick-up-V80-V90-T60-T70-G10-G50-Diesel-and-Gasoline-Version-2-8t-2-5t-2-4L-2-0t.webp",
+        "brands": ["Ford Transit", "Mercedes Sprinter", "Volkswagen Transporter", "Nissan NV", "Toyota HiAce"]
+      },
+      {
+        "type": "Sports Cars",
+        "image": "https://www.designboom.com/wp-content/uploads/2013/11/fabian-oefner-explodes-views-of-classic-sports-cars-designboom-12.jpg",
+        "brands": ["Ferrari", "Lamborghini", "Porsche", "McLaren", "Bugatti", "Aston Martin", "Koenigsegg"]
+      }
+    ],
+    "CommonParts": [
+      {
+        "vehicleType": "Cars",
+        "parts": [
+          { "category": "Engine Components", "items": ["Engine Block", "Cylinder Head", "Pistons", "Crankshaft", "Camshaft", "Timing Belt/Chain", "Fuel Injectors", "Turbocharger"] },
+          { "category": "Transmission & Drivetrain", "items": ["Transmission", "Clutch", "Driveshaft", "Differential", "Axles", "CV Joints"] },
+          { "category": "Braking System", "items": ["Brake Pads", "Brake Rotors", "Brake Calipers", "Brake Lines", "Master Cylinder", "ABS System"] }
+        ]
+      },
+      {
+        "vehicleType": "Bikes",
+        "parts": [
+          { "category": "Engine Components", "items": ["Cylinder Block", "Carburetor", "Spark Plug", "Cam Chain", "Piston Rings"] },
+          { "category": "Transmission & Drivetrain", "items": ["Gearbox", "Clutch Plate", "Drive Chain", "Sprockets"] },
+          { "category": "Braking System", "items": ["Disc Brakes", "Brake Pads", "Brake Calipers", "Brake Levers"] }
+        ]
+      },
+      {
+        "vehicleType": "Trucks",
+        "parts": [
+          { "category": "Engine Components", "items": ["Diesel Engine Block", "Turbocharger", "Fuel Injectors", "Radiator"] },
+          { "category": "Transmission & Drivetrain", "items": ["Heavy-Duty Transmission", "Differential", "Axles"] },
+          { "category": "Braking System", "items": ["Air Brakes", "Brake Drums", "ABS System"] }
+        ]
+      },
+      {
+        "vehicleType": "Buses",
+        "parts": [
+          { "category": "Engine Components", "items": ["Bus Engine Block", "Cooling System", "Fuel Pumps", "Turbocharger"] },
+          { "category": "Transmission & Drivetrain", "items": ["Automatic Transmission", "Axles", "Differential"] },
+          { "category": "Braking System", "items": ["Air Brakes", "Brake Drums", "Brake Pads"] }
+        ]
+      },
+      {
+        "vehicleType": "SUVs",
+        "parts": [
+          { "category": "Engine Components", "items": ["V6/V8 Engine Block", "Turbocharger", "Pistons", "Fuel Injectors"] },
+          { "category": "Transmission & Drivetrain", "items": ["All-Wheel Drive System", "Differential", "Axles"] },
+          { "category": "Braking System", "items": ["ABS System", "Brake Discs", "Brake Pads"] }
+        ]
+      },
+      {
+        "vehicleType": "Vans",
+        "parts": [
+          { "category": "Engine Components", "items": ["V6 Engine Block", "Cooling System", "Fuel Injectors"] },
+          { "category": "Transmission & Drivetrain", "items": ["Automatic Transmission", "Driveshaft"] },
+          { "category": "Braking System", "items": ["Disc Brakes", "ABS System"] }
+        ]
+      },
+      {
+        "vehicleType": "Electric Vehicles",
+        "parts": [
+          { "category": "Battery System", "items": ["Lithium-Ion Battery Pack", "Battery Management System", "Charging Port"] },
+          { "category": "Electric Motor", "items": ["Induction Motor", "Permanent Magnet Motor", "Inverter"] },
+          { "category": "Chassis & Suspension", "items": ["Lightweight Chassis", "Regenerative Braking System", "Adaptive Suspension"] }
+        ]
+      },
+      {
+        "vehicleType": "Sports Cars",
+        "parts": [
+          { "category": "Performance Engine Components", "items": ["V10/V12 Engine Block", "Supercharger", "High-Performance Pistons"] },
+          { "category": "Aerodynamics", "items": ["Spoilers", "Diffusers", "Air Intakes"] },
+          { "category": "Braking System", "items": ["Carbon-Ceramic Brake Discs", "High-Performance Brake Pads"] }
+        ]
+      }
+    ],
+    "item": [],
+    "cart": [],
+    "ordered": []
+  }
+  
