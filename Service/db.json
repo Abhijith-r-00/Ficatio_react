@@ -1,123 +1,1070 @@
 {
-    "registered": [
-      {
-        "id": "621a",
-        "username": "abhishek",
-        "email": "abhishek@gmail.com",
-        "password": "abhishek"
+  "registered": [
+    {
+      "id": "621a",
+      "username": "abhishek",
+      "email": "abhishek@gmail.com",
+      "password": "abhishek"
+    }
+  ],
+  "Login": [],
+  "vehicle": [
+    {
+      "type": "Cars",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4ehOliXYLmFZUiSoly5NF1JZF-Zf5fL2Q&s",
+      "brands": [
+        "Toyota",
+        "Honda",
+        "Ford",
+        "BMW",
+        "Mercedes-Benz",
+        "Audi",
+        "Tesla",
+        "Nissan",
+        "Hyundai"
+      ]
+    },
+    {
+      "type": "Bikes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ortrcpx1mI5d6b16NlEDulmqPQw-gc1FQQ&s",
+      "brands": [
+        "Yamaha",
+        "Ducati",
+        "Harley-Davidson",
+        "Kawasaki",
+        "Suzuki",
+        "KTM",
+        "Triumph",
+        "Honda"
+      ]
+    },
+    {
+      "type": "Trucks",
+      "image": "https://5.imimg.com/data5/QT/QF/MY-3530642/tata-truck-metal-body-parts-500x500.jpg",
+      "brands": [
+        "Volvo",
+        "Mack",
+        "Mercedes-Benz",
+        "Ford",
+        "Isuzu",
+        "Scania",
+        "Freightliner",
+        "MAN"
+      ]
+    },
+    {
+      "type": "Buses",
+      "image": "https://s.alicdn.com/@sc04/kf/H354c815bda8048a2adcba9a371d80e2ez.jpg",
+      "brands": [
+        "Tata",
+        "Mercedes-Benz",
+        "Volvo",
+        "Ashok Leyland",
+        "Scania",
+        "MAN",
+        "Eicher",
+        "Isuzu"
+      ]
+    },
+    {
+      "type": "SUVs",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9KtP0emOG3dQ1GqILw4_AukW007ExaCxPB26Axc--ah-6a1IwKTyLO8FH9gp69Dn2U4&usqp=CAU",
+      "brands": [
+        "Jeep",
+        "Toyota",
+        "Ford",
+        "Land Rover",
+        "Nissan",
+        "Hyundai",
+        "Kia",
+        "Chevrolet"
+      ]
+    },
+    {
+      "type": "Electric Vehicles",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSIVRHW5HkBT2YTF4KR735F-AqLx0e6hZojg&s",
+      "brands": [
+        "Tesla",
+        "Lucid",
+        "Rivian",
+        "Nio",
+        "BYD",
+        "Porsche Taycan",
+        "BMW iX",
+        "Mercedes EQS"
+      ]
+    },
+    {
+      "type": "Vans",
+      "image": "https://image.made-in-china.com/202f0j00EePWSYdFAhGv/Genuine-Auto-Spare-Parts-for-Saic-Maxus-Ldv-Van-Pick-up-V80-V90-T60-T70-G10-G50-Diesel-and-Gasoline-Version-2-8t-2-5t-2-4L-2-0t.webp",
+      "brands": [
+        "Ford Transit",
+        "Mercedes Sprinter",
+        "Volkswagen Transporter",
+        "Nissan NV",
+        "Toyota HiAce"
+      ]
+    },
+    {
+      "type": "Sports Cars",
+      "image": "https://www.designboom.com/wp-content/uploads/2013/11/fabian-oefner-explodes-views-of-classic-sports-cars-designboom-12.jpg",
+      "brands": [
+        "Ferrari",
+        "Lamborghini",
+        "Porsche",
+        "McLaren",
+        "Bugatti",
+        "Aston Martin",
+        "Koenigsegg"
+      ]
+    }
+  ],
+  "CommonParts": [
+    {
+      "vehicleType": "Cars",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Bikes",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Trucks",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Buses",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "SUVs",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Vans",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Electric Vehicles",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "vehicleType": "Sports Cars",
+      "parts": [
+        {
+          "category": "Engine Components",
+          "items": [
+            "Engine Block",
+            "Cylinder Head",
+            "Pistons",
+            "Crankshaft",
+            "Camshaft",
+            "Timing Belt/Chain",
+            "Fuel Injectors",
+            "Turbocharger"
+          ]
+        },
+        {
+          "category": "Transmission & Drivetrain",
+          "items": [
+            "Transmission",
+            "Clutch",
+            "Driveshaft",
+            "Differential",
+            "Axles",
+            "CV Joints"
+          ]
+        },
+        {
+          "category": "Braking System",
+          "items": [
+            "Brake Pads",
+            "Brake Rotors",
+            "Brake Calipers",
+            "Brake Lines",
+            "Master Cylinder",
+            "ABS System"
+          ]
+        },
+        {
+          "category": "Lighting & Visibility",
+          "items": [
+            "Headlights",
+            "Taillights",
+            "Fog Lights",
+            "Turn Signals",
+            "Windshield Wipers"
+          ]
+        },
+        {
+          "category": "Fuel System",
+          "items": [
+            "Fuel Tank",
+            "Fuel Pump",
+            "Fuel Injectors",
+            "Fuel Filter"
+          ]
+        },
+        {
+          "category": "Tires & Wheels",
+          "items": [
+            "Tires",
+            "Rims/Wheels",
+            "Lug Nuts",
+            "Wheel Bearings"
+          ]
+        },
+        {
+          "category": "Electrical & Electronics",
+          "items": [
+            "Battery",
+            "Alternator",
+            "Starter Motor",
+            "Spark Plugs",
+            "Sensors",
+            "ECU",
+            "Wiring Harness"
+          ]
+        },
+        {
+          "category": "Exhaust System",
+          "items": [
+            "Exhaust Manifold",
+            "Catalytic Converter",
+            "Muffler",
+            "Oxygen Sensors"
+          ]
+        }
+      ]
+    }
+  ],
+  "item": [
+    {
+      "category": "Engine Components",
+      "items": [
+        {
+          "name": "Engine Block",
+          "rate": 5000,
+          "description": "The engine block is the main part of an engine that houses the cylinders and internal components.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSVE71PJTF_Um1WlZoJHhd3jLxaAKyY1noQ&s",
+          "warranty": "2 years",
+          "specifications": {
+            "material": "Cast Iron/Aluminum",
+            "cylinders": "4, 6, 8",
+            "weight": "120kg"
+          }
+        },
+        {
+          "name": "Cylinder Head",
+          "rate": 2500,
+          "description": "The cylinder head sits above the cylinders on top of the engine block and contains the combustion chambers.",
+          "image": "https://hips.hearstapps.com/hmg-prod/images/cylinder-1-1555358422.gif?crop=0.75xw:1xh;center,top&resize=1200:*",
+          "warranty": "1 year",
+          "specifications": {
+            "material": "Aluminum",
+            "valveConfiguration": "DOHC/SOHC",
+            "compressionRatio": "10:1"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Braking System",
+      "items": [
+        {
+          "name": "Brake Pads",
+          "rate": 500,
+          "description": "Brake pads create friction against the brake rotors to slow down the vehicle.",
+          "image": "https://s30010.pcdn.co/wp-content/uploads/2023/03/Midas-Blog-Mobile-Banner-Brake-Pads.jpg.optimal.jpg",
+          "warranty": "1 year",
+          "specifications": {
+            "material": "Ceramic/Metallic",
+            "thickness": "10mm",
+            "temperatureResistance": "Up to 800°C"
+          }
+        },
+        {
+          "name": "Brake Rotors",
+          "rate": 1200,
+          "description": "Brake rotors work with brake pads to slow or stop the vehicle.",
+          "image": "https://res.cloudinary.com/yourmechanic/image/upload/dpr_auto,f_auto,q_auto/v1/article_images/Lifetime_of_Brake_Rotors",
+          "warranty": "2 years",
+          "specifications": {
+            "diameter": "300mm",
+            "material": "Carbon Steel",
+            "ventilation": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Lighting & Visibility",
+      "items": [
+        {
+          "name": "Headlights",
+          "rate": 800,
+          "description": "Headlights illuminate the road ahead for visibility during night driving.",
+          "image": "https://lightwerkz.net/cdn/shop/files/82824072_2811130525577112_8785711394763833344_n_420x.jpg?v=1708540552",
+          "warranty": "1 year",
+          "specifications": {
+            "bulbType": "LED/Halogen",
+            "brightness": "5000 Lumens",
+            "lifespan": "50,000 hours"
+          }
+        },
+        {
+          "name": "Fog Lights",
+          "rate": 600,
+          "description": "Fog lights provide enhanced visibility in foggy conditions.",
+          "image": "https://lightwerkz.net/cdn/shop/files/82824072_2811130525577112_8785711394763833344_n_420x.jpg?v=1708540552",
+          "warranty": "1 year",
+          "specifications": {
+            "colorTemperature": "6000K",
+            "powerConsumption": "35W",
+            "beamAngle": "120°"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Fuel System",
+      "items": [
+        {
+          "name": "Fuel Pump",
+          "rate": 900,
+          "description": "The fuel pump transfers fuel from the tank to the engine.",
+          "image": "https://example.com/fuel-pump.jpg",
+          "warranty": "2 years",
+          "specifications": {
+            "flowRate": "200 LPH",
+            "voltage": "12V",
+            "compatibility": "Petrol/Diesel"
+          }
+        },
+        {
+          "name": "Fuel Injectors",
+          "rate": 600,
+          "description": "Fuel injectors spray fuel into the combustion chamber for proper ignition.",
+          "image": "https://example.com/fuel-injectors.jpg",
+          "warranty": "2 years",
+          "specifications": {
+            "injectionType": "Direct/Port",
+            "flowRate": "24 lb/hr",
+            "pressure": "40 PSI"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Tires & Wheels",
+      "items": [
+        {
+          "name": "Tires",
+          "rate": 4000,
+          "description": "High-quality radial tires for all-terrain performance.",
+          "image": "https://example.com/tires.jpg",
+          "warranty": "5 years",
+          "specifications": {
+            "size": "225/55R17",
+            "treadDepth": "10mm",
+            "speedRating": "V"
+          }
+        },
+        {
+          "name": "Rims/Wheels",
+          "rate": 6000,
+          "description": "Durable alloy wheels for enhanced vehicle aesthetics and performance.",
+          "image": "https://example.com/rims.jpg",
+          "warranty": "3 years",
+          "specifications": {
+            "material": "Aluminum Alloy",
+            "diameter": "17 inches",
+            "boltPattern": "5x114.3"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Electrical & Electronics",
+      "items": [
+        {
+          "name": "Battery",
+          "rate": 7000,
+          "description": "A reliable 12V battery for powering vehicle electrical systems.",
+          "image": "https://example.com/battery.jpg",
+          "warranty": "3 years",
+          "specifications": {
+            "capacity": "70Ah",
+            "voltage": "12V",
+            "type": "AGM"
+          }
+        },
+        {
+          "name": "Alternator",
+          "rate": 5000,
+          "description": "Generates electrical power to charge the battery and run accessories.",
+          "image": "https://example.com/alternator.jpg",
+          "warranty": "2 years",
+          "specifications": {
+            "outputPower": "120A",
+            "voltage": "12V",
+            "cooling": "Air-cooled"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Exhaust System",
+      "items": [
+        {
+          "name": "Exhaust Manifold",
+          "rate": 4500,
+          "description": "Collects engine exhaust gases and directs them to the exhaust system.",
+          "image": "https://example.com/exhaust-manifold.jpg",
+          "warranty": "2 years",
+          "specifications": {
+            "material": "Stainless Steel",
+            "design": "4-into-1",
+            "heatResistance": "Up to 1000°C"
+          }
+        },
+        {
+          "name": "Muffler",
+          "rate": 3000,
+          "description": "Reduces engine noise and optimizes exhaust flow.",
+          "image": "https://example.com/muffler.jpg",
+          "warranty": "3 years",
+          "specifications": {
+            "material": "Aluminum-coated Steel",
+            "noiseReduction": "70 dB",
+            "diameter": "3 inches"
+          }
+        }
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": "71f3",
+      "name": "Cylinder Head",
+      "rate": 2500,
+      "description": "The cylinder head sits above the cylinders on top of the engine block and contains the combustion chambers.",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/cylinder-1-1555358422.gif?crop=0.75xw:1xh;center,top&resize=1200:*",
+      "warranty": "1 year",
+      "specifications": {
+        "material": "Aluminum",
+        "valveConfiguration": "DOHC/SOHC",
+        "compressionRatio": "10:1"
       }
-    ],
-    "Login": [],
-    "vehicle": [
-      {
-        "type": "Cars",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRb4ehOliXYLmFZUiSoly5NF1JZF-Zf5fL2Q&s",
-        "brands": ["Toyota", "Honda", "Ford", "BMW", "Mercedes-Benz", "Audi", "Tesla", "Nissan", "Hyundai"]
-      },
-      {
-        "type": "Bikes",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ortrcpx1mI5d6b16NlEDulmqPQw-gc1FQQ&s",
-        "brands": ["Yamaha", "Ducati", "Harley-Davidson", "Kawasaki", "Suzuki", "KTM", "Triumph", "Honda"]
-      },
-      {
-        "type": "Trucks",
-        "image": "https://5.imimg.com/data5/QT/QF/MY-3530642/tata-truck-metal-body-parts-500x500.jpg",
-        "brands": ["Volvo", "Mack", "Mercedes-Benz", "Ford", "Isuzu", "Scania", "Freightliner", "MAN"]
-      },
-      {
-        "type": "Buses",
-        "image": "https://s.alicdn.com/@sc04/kf/H354c815bda8048a2adcba9a371d80e2ez.jpg",
-        "brands": ["Tata", "Mercedes-Benz", "Volvo", "Ashok Leyland", "Scania", "MAN", "Eicher", "Isuzu"]
-      },
-      {
-        "type": "SUVs",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9KtP0emOG3dQ1GqILw4_AukW007ExaCxPB26Axc--ah-6a1IwKTyLO8FH9gp69Dn2U4&usqp=CAU",
-        "brands": ["Jeep", "Toyota", "Ford", "Land Rover", "Nissan", "Hyundai", "Kia", "Chevrolet"]
-      },
-      {
-        "type": "Electric Vehicles",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSIVRHW5HkBT2YTF4KR735F-AqLx0e6hZojg&s",
-        "brands": ["Tesla", "Lucid", "Rivian", "Nio", "BYD", "Porsche Taycan", "BMW iX", "Mercedes EQS"]
-      },
-      {
-        "type": "Vans",
-        "image": "https://image.made-in-china.com/202f0j00EePWSYdFAhGv/Genuine-Auto-Spare-Parts-for-Saic-Maxus-Ldv-Van-Pick-up-V80-V90-T60-T70-G10-G50-Diesel-and-Gasoline-Version-2-8t-2-5t-2-4L-2-0t.webp",
-        "brands": ["Ford Transit", "Mercedes Sprinter", "Volkswagen Transporter", "Nissan NV", "Toyota HiAce"]
-      },
-      {
-        "type": "Sports Cars",
-        "image": "https://www.designboom.com/wp-content/uploads/2013/11/fabian-oefner-explodes-views-of-classic-sports-cars-designboom-12.jpg",
-        "brands": ["Ferrari", "Lamborghini", "Porsche", "McLaren", "Bugatti", "Aston Martin", "Koenigsegg"]
+    },
+    {
+      "id": "7de2",
+      "name": "Engine Block",
+      "rate": 5000,
+      "description": "The engine block is the main part of an engine that houses the cylinders and internal components.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFSVE71PJTF_Um1WlZoJHhd3jLxaAKyY1noQ&s",
+      "warranty": "2 years",
+      "specifications": {
+        "material": "Cast Iron/Aluminum",
+        "cylinders": "4, 6, 8",
+        "weight": "120kg"
       }
-    ],
-    "CommonParts": [
-      {
-        "vehicleType": "Cars",
-        "parts": [
-          { "category": "Engine Components", "items": ["Engine Block", "Cylinder Head", "Pistons", "Crankshaft", "Camshaft", "Timing Belt/Chain", "Fuel Injectors", "Turbocharger"] },
-          { "category": "Transmission & Drivetrain", "items": ["Transmission", "Clutch", "Driveshaft", "Differential", "Axles", "CV Joints"] },
-          { "category": "Braking System", "items": ["Brake Pads", "Brake Rotors", "Brake Calipers", "Brake Lines", "Master Cylinder", "ABS System"] }
-        ]
-      },
-      {
-        "vehicleType": "Bikes",
-        "parts": [
-          { "category": "Engine Components", "items": ["Cylinder Block", "Carburetor", "Spark Plug", "Cam Chain", "Piston Rings"] },
-          { "category": "Transmission & Drivetrain", "items": ["Gearbox", "Clutch Plate", "Drive Chain", "Sprockets"] },
-          { "category": "Braking System", "items": ["Disc Brakes", "Brake Pads", "Brake Calipers", "Brake Levers"] }
-        ]
-      },
-      {
-        "vehicleType": "Trucks",
-        "parts": [
-          { "category": "Engine Components", "items": ["Diesel Engine Block", "Turbocharger", "Fuel Injectors", "Radiator"] },
-          { "category": "Transmission & Drivetrain", "items": ["Heavy-Duty Transmission", "Differential", "Axles"] },
-          { "category": "Braking System", "items": ["Air Brakes", "Brake Drums", "ABS System"] }
-        ]
-      },
-      {
-        "vehicleType": "Buses",
-        "parts": [
-          { "category": "Engine Components", "items": ["Bus Engine Block", "Cooling System", "Fuel Pumps", "Turbocharger"] },
-          { "category": "Transmission & Drivetrain", "items": ["Automatic Transmission", "Axles", "Differential"] },
-          { "category": "Braking System", "items": ["Air Brakes", "Brake Drums", "Brake Pads"] }
-        ]
-      },
-      {
-        "vehicleType": "SUVs",
-        "parts": [
-          { "category": "Engine Components", "items": ["V6/V8 Engine Block", "Turbocharger", "Pistons", "Fuel Injectors"] },
-          { "category": "Transmission & Drivetrain", "items": ["All-Wheel Drive System", "Differential", "Axles"] },
-          { "category": "Braking System", "items": ["ABS System", "Brake Discs", "Brake Pads"] }
-        ]
-      },
-      {
-        "vehicleType": "Vans",
-        "parts": [
-          { "category": "Engine Components", "items": ["V6 Engine Block", "Cooling System", "Fuel Injectors"] },
-          { "category": "Transmission & Drivetrain", "items": ["Automatic Transmission", "Driveshaft"] },
-          { "category": "Braking System", "items": ["Disc Brakes", "ABS System"] }
-        ]
-      },
-      {
-        "vehicleType": "Electric Vehicles",
-        "parts": [
-          { "category": "Battery System", "items": ["Lithium-Ion Battery Pack", "Battery Management System", "Charging Port"] },
-          { "category": "Electric Motor", "items": ["Induction Motor", "Permanent Magnet Motor", "Inverter"] },
-          { "category": "Chassis & Suspension", "items": ["Lightweight Chassis", "Regenerative Braking System", "Adaptive Suspension"] }
-        ]
-      },
-      {
-        "vehicleType": "Sports Cars",
-        "parts": [
-          { "category": "Performance Engine Components", "items": ["V10/V12 Engine Block", "Supercharger", "High-Performance Pistons"] },
-          { "category": "Aerodynamics", "items": ["Spoilers", "Diffusers", "Air Intakes"] },
-          { "category": "Braking System", "items": ["Carbon-Ceramic Brake Discs", "High-Performance Brake Pads"] }
-        ]
-      }
-    ],
-    "item": [],
-    "cart": [],
-    "ordered": []
-  }
-  
+    }
+  ],
+  "ordered": []
+}

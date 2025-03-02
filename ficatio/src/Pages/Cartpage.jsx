@@ -1,123 +1,81 @@
-import React, { useState } from "react";
-import { Container, Table, Button, Image, Row, Col, Card } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Container, Card, Button, ListGroup } from "react-bootstrap";
+import { deleteCartItem, getAllAdded } from "../Services/allApi";
 import { useNavigate } from "react-router-dom";
-import { FaTrash, FaShoppingCart } from "react-icons/fa";
+
 
 const CartPage = () => {
+  const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
+  // Fetch cart items from db.json
+  useEffect(() => {
+   getAllAddedItems();
+  }, []);
+const getAllAddedItems=async()=>{
+  try {
+    const res=await getAllAdded();
+    setCartItems(res.data)
+console.log(res);
 
-  // Sample cart items (Replace with data from backend or context)
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Brake Pads",
-      price: 1200,
-      quantity: 1,
-      image: "https://via.placeholder.com/100",
-    },
-    {
-      id: 2,
-      name: "Air Filter",
-      price: 500,
-      quantity: 2,
-      image: "https://via.placeholder.com/100",
-    },
-  ]);
-
-  // Function to update quantity
-  const updateQuantity = (id, qty) => {
-    const updatedCart = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity: qty } : item
-    );
-    setCartItems(updatedCart);
+  } catch (error) {
+    console.error();
+    
+  }
+}
+  // Remove item from cart
+  const handleRemoveFromCart = async (id) => {
+    try {
+      deleteCartItem(id);
+      getAllAddedItems();
+    } catch (error) {
+      console.error("Error deleting item:", error);
+    }
   };
-
-  // Function to remove item from cart
-  const removeItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
-  };
-
-  // Calculate total price
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+console.log(cartItems,"hgwghd");
 
   return (
-    <Container className="mt-4">
-      <h2 className="text-center mb-4">
-        <FaShoppingCart className="me-2" /> Your Shopping Cart
-      </h2>
+    <Container className="mt-5">
+      <h2 className="text-center mb-4">🛒 Your Shopping Cart</h2>
 
       {cartItems.length === 0 ? (
-        <h4 className="text-center text-muted">Your cart is empty! 🛒</h4>
+        <p className="text-center">Your cart is empty.</p>
       ) : (
-        <Row>
-          <Col md={8}>
-            <Table bordered hover responsive className="shadow-sm">
-              <thead className="bg-primary text-white">
-                <tr>
-                  <th>Product</th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Total</th>
-                  <th>Remove</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cartItems.map((item) => (
-                  <tr key={item.id}>
-                    <td>
-                      <Image src={item.image} alt={item.name} width={50} height={50} rounded />
-                    </td>
-                    <td>{item.name}</td>
-                    <td>₹{item.price}</td>
-                    <td>
-                      <select
-                        value={item.quantity}
-                        onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                        className="form-select"
-                      >
-                        {[1, 2, 3, 4, 5].map((qty) => (
-                          <option key={qty} value={qty}>
-                            {qty}
-                          </option>
-                        ))}
-                      </select>
-                    </td>
-                    <td>₹{item.price * item.quantity}</td>
-                    <td>
-                      <Button variant="danger" onClick={() => removeItem(item.id)}>
-                        <FaTrash />
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Col>
-
-          {/* Order Summary Section */}
-          <Col md={4}>
-            <Card className="shadow-lg p-3">
-              <h4 className="text-center">Order Summary</h4>
-              <hr />
-              <p>
-                Subtotal: <strong>₹{totalPrice}</strong>
-              </p>
-              <p>Shipping: <strong>FREE</strong></p>
-              <h5>
-                Total: <strong className="text-success">₹{totalPrice}</strong>
-              </h5>
-              <Button 
-                variant="success" 
-                className="w-100 mt-3" 
-                onClick={() => navigate("/payment")}
-              >
-                Proceed to Checkout
-              </Button>
-            </Card>
-          </Col>
-        </Row>
+        cartItems.map((item) => (
+          <Card className="mb-3 shadow-lg" key={item.id} >
+            <Card.Body className="d-flex align-items-center">
+              <Card.Img
+                src={item.image}
+                style={{ width: "150px", height: "150px", objectFit: "cover", marginRight: "20px" }}
+              />
+              <div style={{ flex: 1 }}>
+                <h4>{item.name}</h4>
+                <p>{item.description}</p>
+                <h5 className="text-success">{item.rate} ₹</h5>
+                <ListGroup variant="flush">
+                  {Object.entries(item.specifications || {}).slice(0, 3).map(([key, value]) => (
+                    <ListGroup.Item key={key}>
+                      <strong>{key}:</strong> {value}
+                    </ListGroup.Item>
+                  ))}
+                </ListGroup>
+              </div>
+              <div>
+                <Button variant="danger" onClick={() => handleRemoveFromCart(item.id)}>
+                  🗑 Remove
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        ))
       )}
+
+      {/* {cartItems.length > 0 && (
+        <div className="text-center mt-4">
+          <Button variant="success" size="lg">
+            💳 Pay Now
+          </Button>
+        </div>
+      )} */}
     </Container>
   );
 };

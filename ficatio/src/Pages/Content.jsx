@@ -1,10 +1,15 @@
 import React from 'react'
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { FaTruck, FaTools, FaStar, FaUsers } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 
 const Content = ({setShow,logined}) => {
+ const navigate=useNavigate()
   const handleShow = () => setShow(true);
+  const redirect=()=>{
+    navigate('home')
+  }
   return (
     <>
      
@@ -17,7 +22,8 @@ const Content = ({setShow,logined}) => {
         <Container>
           <h1 className="display-3 fw-bold">Find the Best Vehicle Parts Here!</h1>
           <p className="lead">High-quality auto parts at unbeatable prices. Fast delivery, best service!</p>
-          <Button variant="warning" size="lg" onClick={handleShow}>Shop Now</Button>
+          {/* {console.log(logined)} */}
+         {logined?<Button variant="warning" size="lg" onClick={redirect} >Shop Now</Button>:<Button variant="warning" size="lg" onClick={handleShow}>Shop Now</Button>} 
         </Container>
       </div>
 

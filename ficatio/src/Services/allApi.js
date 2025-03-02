@@ -12,4 +12,15 @@ export const getUser=async()=>{
   export const getcommonParts = async () => {
     return await commonApi("get", `CommonParts`, "");
   };
-  
+  export const getItem=async()=>{
+    return await commonApi("get","item","")
+  }
+  export const addToCart=async(cartdata)=>{
+    return await commonApi("post","cart",cartdata)
+  }
+  export const getAllAdded=async()=>{
+    return await commonApi("get","cart","")
+  }
+  export const deleteCartItem=async(id)=>{
+        return await commonApi("Delete",`cart/${id}`,{})
+  }

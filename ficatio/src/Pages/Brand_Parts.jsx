@@ -17,16 +17,19 @@ const BrandParts = () => {
     const fetchParts = async () => {
       try {
         const data = await getcommonParts();
-        console.log(data);
+        // console.log(data.data);
        let  dataitem=data.data
         const vehicleParts = dataitem.find((item) => item.vehicleType === vehicleType);
         setCategories(vehicleParts ? vehicleParts.parts : []);
+        // console.log(vehicleParts.parts);
+        
       } catch (error) {
         console.error("Error fetching parts:", error);
       }
     };
     fetchParts();
   }, [vehicleType]);
+// console.log(categories);
 
   return (
     <Container className="mt-4">
@@ -43,8 +46,9 @@ const BrandParts = () => {
                       <Button 
                         variant="outline-primary" 
                         className="w-100"
-                        onClick={() => navigate(`/part-details`, { state: { vehicleType, brand, part: item } })}
-                      >
+                        onClick={() => navigate(`/part-details`, { state: { vehicleType, brand,item,category:category.category } })}
+                          >
+                        
                         {item}
                       </Button>
                     </Col>

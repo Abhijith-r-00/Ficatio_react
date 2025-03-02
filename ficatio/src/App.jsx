@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
- 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Form } from "react-bootstrap";
@@ -17,8 +16,6 @@ import Payment from "./Pages/Payment";
 import CartPage from "./Pages/Cartpage";
 import { addUser, getUser } from "./Services/allApi";
 
- // Base URL for registered users
-
 function App() {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -30,6 +27,14 @@ function App() {
     password: "",
   });
 
+  // Check if user is already logged in
+  useEffect(() => {
+    const userId = localStorage.getItem("id");
+    if (userId) {
+      setIsLogined(true);
+    }
+  }, []);
+
   // Handle input changes
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,7 +43,7 @@ function App() {
   // Register User
   const handleRegister = async () => {
     try {
-      const res = await addUser(formData)
+      const res = await addUser(formData);
       if (res.status === 201) {
         alert("Registration successful! You can now log in.");
         setIsRegistered(true);
@@ -53,13 +58,18 @@ function App() {
   const handleLogin = async () => {
     try {
       const res = await getUser(); // Fetch all registered users
-      const users = res.data; 
-  
+      const users = res.data;
+
       // Check if credentials match any registered user
-      const user = users.find(user => user.username === formData.username && user.password === formData.password);
-  
+      const user = users.find(
+        (user) =>
+          user.username === formData.username &&
+          user.password === formData.password
+      );
+
       if (user) {
         localStorage.setItem("id", user.id);
+        localStorage.setItem("username", user.username);
         setIsLogined(true);
         setShow(false);
         navigate("/Home");
@@ -71,15 +81,26 @@ function App() {
       alert("Login failed. Please try again.");
     }
   };
-  
+
+  // Logout User
+  const handleLogout = () => {
+    localStorage.removeItem("id");
+    localStorage.removeItem("username");
+    setIsLogined(false);
+    navigate("/");
+  };
 
   return (
     <>
-      <Header setShow={setShow} logined={isLogined} />
+      <Header
+        setShow={setShow}
+        logined={isLogined}
+        handleLogout={handleLogout}
+      />
       <Routes>
-        <Route path="/" element={<Content setShow={setShow} logined={isLogined} />} />
+        <Route path="/" element={<Content setShow={setShow} logined={isLogined} />}/>
         <Route path="/Home" element={<Home />} />
-        <Route path="//Brand_Part" element={<Brand_Parts />} />
+        <Route path="/Brand_Part" element={<Brand_Parts />} />
         <Route path="/part-details" element={<Part_details />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/cart" element={<CartPage />} />
@@ -89,18 +110,32 @@ function App() {
       {/* Modal for Login/Register */}
       <Modal show={show} onHide={() => setShow(false)} centered>
         <Modal.Header closeButton className="bg-primary text-white">
-          <Modal.Title className="w-100 text-center">{isRegistered ? "Login" : "Register"}</Modal.Title>
+          <Modal.Title className="w-100 text-center">
+            {isRegistered ? "Login" : "Register"}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {isRegistered ? (
             <Form>
               <Form.Group className="mb-3">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" name="username" onChange={handleInputChange} placeholder="Enter your username" required />
+                <Form.Control
+                  type="text"
+                  name="username"
+                  onChange={handleInputChange}
+                  placeholder="Enter your username"
+                  required
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" name="password" onChange={handleInputChange} placeholder="Enter your password" required />
+                <Form.Control
+                  type="password"
+                  name="password"
+                  onChange={handleInputChange}
+                  placeholder="Enter your password"
+                  required
+                />
               </Form.Group>
               <Button variant="success" className="w-100" onClick={handleLogin}>
                 Login
@@ -110,17 +145,39 @@ function App() {
             <Form>
               <Form.Group className="mb-3">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" name="username" onChange={handleInputChange} placeholder="Enter your username" required />
+                <Form.Control
+                  type="text"
+                  name="username"
+                  onChange={handleInputChange}
+                  placeholder="Enter your username"
+                  required
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" name="email" onChange={handleInputChange} placeholder="Enter your email" required />
+                <Form.Control
+                  type="email"
+                  name="email"
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                  required
+                />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" name="password" onChange={handleInputChange} placeholder="Enter your password" required />
+                <Form.Control
+                  type="password"
+                  name="password"
+                  onChange={handleInputChange}
+                  placeholder="Enter your password"
+                  required
+                />
               </Form.Group>
-              <Button variant="primary" className="w-100" onClick={handleRegister}>
+              <Button
+                variant="primary"
+                className="w-100"
+                onClick={handleRegister}
+              >
                 Register
               </Button>
             </Form>
@@ -130,8 +187,14 @@ function App() {
           <Button variant="danger" onClick={() => setShow(false)}>
             Close
           </Button>
-          <Button variant="link" className="text-primary" onClick={() => setIsRegistered(!isRegistered)}>
-            {isRegistered ? "Need an account? Register here" : "Already have an account? Login here"}
+          <Button
+            variant="link"
+            className="text-primary"
+            onClick={() => setIsRegistered(!isRegistered)}
+          >
+            {isRegistered
+              ? "Need an account? Register here"
+              : "Already have an account? Login here"}
           </Button>
         </Modal.Footer>
       </Modal>
